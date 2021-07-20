@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h6= title
+  a(href="/catalog/exam/create") Create New Exam
+  hr
+  ul
+  each val in list_exams
+    li 
+      a(href=val.url) #{val.name}
+    //p #{val.about}
+    
+
+  else
+    li There are no Exams.

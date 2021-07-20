@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h6 #{title}
+          
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') Exam Name:
+      input#name.form-control(type='text', placeholder='Exam name' name='name' required='true' value=(undefined===exam ? '' : exam.name) )
+    
+    div.form-group
+      label(for='about') About Exam:
+      input#name.form-control(type='text', placeholder='About Exam' name='about' value=(undefined===exam ? '' : exam.about) )
+    
+    
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

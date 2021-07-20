@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  //h1 = title
+  //img(src="logo.jpg")
+  p
+  .container 
+    .row 
+      .col-sm-1 
+      .col-sm-10
+        .card.text-center
+            .card-body.text-primary
+              blockquote.blockquote.mb-0
+                p Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
+                footer.blockquote-footer Richard Feynmann
+                  cite(title='Source Title')
+      .col-sm-1  
+  p
+  
+  .container
+      .row
+        .col-sm-8
+          #carouselExampleCaptions.carousel.slide(data-bs-ride='carousel').border
+              .carousel-indicators
+                button.active(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='1' aria-label='Slide 2')
+                button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src="/images/image1.jpg" rel='iamge')
+                  .carousel-caption.d-none.d-md-block
+                    
+                .carousel-item
+                  img.d-block.w-100(src="/images/image2.jpg" rel='iamge')
+                  .carousel-caption.d-none.d-md-block
+                   
+                .carousel-item
+                  img.d-block.w-100(src="/images/image3.jpg" rel='iamge')
+                  .carousel-caption.d-none.d-md-block
+                    
+              button.carousel-control-prev(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+              button.carousel-control-next(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+        .col-sm-4      
+          .card
+            .card-body
+              p.card-text In the last 25+ Glorious Years of  Tezpur University our students have shown tremendous success in international/ national/ state level exams. This portal tries to showcases some of those records. Thanks for visiting.
+              
+              a.btn.btn-primary(href='/catalog/achivements') Go to Achivements
+  
+  p
+  .card.text-center
+            .card-body
+             p Tezpur University was established by an Act of Parliament in 1994. The objects of this Central University as envisaged in the statutes are that it shall strive to offer employment oriented and interdisciplinary courses to meet the local and regional aspirations and the development needs of the state of Assam and also offer courses and promote research in areas which are of special and direct relevance to the region and in emerging areas in Science and Technology...
+                
+
+  //a(href="#menu-toggle" class="btn btn-default" id="menu-toggle") Toggle Menu
+ 
+
+  //script.  
+    $("#menu-toggle").click(function(e) {
+      $("#wrapper").toggleClass('active');
+    });
+  

@@ -1,0 +1,21 @@
+extends layout 
+
+block content
+  h1=title
+  
+  ul
+    //- result_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+    each result in result_list
+      li 
+        a(href=result.url) #{result.student.name}
+        div #{result.student.department} 
+        div #{result.student.course}
+        div #{result.rank}
+        div #{result.marks}
+        div #{result.exam.name}
+
+    else
+      li There are no Achivements.
+    hr 
+    div
+      a(href="/catalog/result/create") Create Achivements

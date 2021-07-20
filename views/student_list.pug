@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h6= title
+  
+  p
+    a(href='/catalog/student/create') Create student
+  
+  hr
+  
+  ul
+  each student in student_list
+    li 
+      a(href='student/'+student.url) #{student.name} 
+     
+
+  else
+    li There are no students.
+
+  div(style='margin-left:20px;margin-top:20px')
+  
+  

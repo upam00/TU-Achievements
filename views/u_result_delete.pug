@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  h1 #{title}
+  
+  p #[strong Student:] 
+    a(href='/catalog/student/'+result.student.url) #{result.student.name}
+  p #[strong Enrollment ID:] #{result.student.enrollment_no}
+  p #[strong Marks:] #{result.marks}
+  p #[strong Rank:] #{result.rank}
+  p #[strong Percentile:] #{result.marks}
+  p #[strong ISBN:] #{result.isbn}
+  p #[strong Exam:] #{result.exam}
+  
+
+  hr
+  
+  p Do you really want to delete this Result?
+    
+  form(method='POST' action='')
+    div.form-group
+      input#id.form-control(type='hidden',name='id', required='true', value=result._id )
+
+    button.btn.btn-primary(type='submit') Delete

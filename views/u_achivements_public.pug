@@ -1,0 +1,29 @@
+extends layout_public
+
+block content
+    
+    body
+    br
+    .form-group.pull-right
+      input.search.form-control(type='text' placeholder='What you looking for?')
+    span.counter.pull-right
+    table.table.table-hover.table-bordered.table-striped.results
+        thead
+            tr
+            th.col-sm-12 Achivements  
+        tbody
+            each result in result_list 
+                tr
+                    td.col-sm-12
+                        .card-body.text-center
+                            p.card-text Congratulations to #{result.student.name} from Department of #{result.student.department}, enrollened in #{result.student.course} program for clearing #{result.exam.name}<br> Rank = #{result.rank} Marks = #{result.marks} Perentile = #{result.percentile}
+                            
+                           
+                                
+
+ 
+            else 
+                li There are no achivements
+
+
+

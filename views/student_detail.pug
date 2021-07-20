@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  p #[strong Student Name:]  #{student.name}
+  p #[strong Department:] #{student.department}
+  p #[strong Course:] #{student.course}
+  p #[strong Enrollment No:] #{student.enrollment_no}
+  
+  p
+    a(href=student.url+'/update') Update student
+  p
+    a(href='/catalog/students') All students

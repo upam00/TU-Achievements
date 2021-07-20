@@ -1,0 +1,76 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    title TU Achivements
+    // Favicon
+    link(rel='icon' type='image/x-icon' href='assets/favicon.ico')
+    // Core theme CSS (includes Bootstrap)
+    link(href='/stylesheets/style.css' rel='stylesheet')
+  body
+    #wrapper.d-flex
+      // Sidebar
+      #sidebar-wrapper.border-end.bg-white
+        
+
+        .list-group.list-group-flush
+          p(align='center')
+            img(src="/images/logo2.png" rel='iamge' align='center' width = '70%'  height='70%')    
+          h3(align='center') #[strong Tezpur University]
+          h6
+            p(align='center') NACC 'A' credited 
+            p(align='center') Napam, Sonitpur 
+            p(align='center') Assam, India
+            p(align='center') PIN 784028
+          p(align='center')
+            a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/login') Admin Login
+            //a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/catalog/exams') Exams
+            //a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/catalog/results') Results
+            //a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/catalog/authors') Author
+            //a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/catalog/books') Book
+          //a.list-group-item.list-group-item-action.list-group-item-light.p-3(href='/catalog/genres') Genre
+      // Page content wrapper
+      #page-content-wrapper
+        // Top navigation
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.border-bottom
+          .container-fluid
+            button#sidebarToggle.btn.btn-outline-secondary 
+              span.navbar-toggler-icon
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation') Menu
+              
+            #navbarSupportedContent.collapse.navbar-collapse
+              ul.navbar-nav.ms-auto.mt-2.mt-lg-0
+                //img(src="/images/Untitled.png" rel='iamge' align='center' width = '100%'  height='100%')    
+                //h1(align='left') #[strong Tezpur University]
+                //a.navbar-brand(href='#')  #[strong Tezpur University]
+                
+                //input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+                //button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+                
+                li.nav-item.active
+                  a.nav-link(href='/catalog') Home
+                li.nav-item
+                  a.nav-link(href='/catalog/achivements') Achivements
+                //li.nav-item
+                  a.nav-link(href='/catalog/exams') Exams
+                
+                //li.nav-item.dropdown
+                  a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+                  .dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='#!') Action
+                    a.dropdown-item(href='#!') Another action
+                    .dropdown-divider
+                    a.dropdown-item(href='#!') Something else here
+        // Page content
+        .container-fluid
+          block content
+    // Bootstrap core JS
+    script(src="/scripts/myscriptajax.js" rel='scripts')
+    script(src="/scripts/myscriptbs.js", rel='scripts')
+    
+    // Core theme JS
+    script(src="/scripts/myscript.js", rel='scripts')
+

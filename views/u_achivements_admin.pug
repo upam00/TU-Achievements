@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    br
+    body
+    .form-group.pull-right
+      input.search.form-control(type='text' placeholder='What you looking for?')
+    span.counter.pull-right
+    table.table.table-hover.table-bordered.results
+        thead
+            tr
+            th.col-sm-12 Achivements  
+              div 
+                a(href='/catalog/result/create') Create New Achivement
+        tbody
+            each result in result_list
+                tr
+                    td.col-sm-12
+                        .card-body.text-center
+                            p.card-text Congratulations to  #{result.student.name} from Department of #{result.student.department}, enrollened in #{result.student.course} program for clearing #{result.exam.name}. <br>  Rank = #{result.rank} Marks = #{result.marks} Perentile = #{result.percentile} <a href=#{result.url}> Details
+                                
+                           
+                                
+
+ 
+            else 
+                li There are no achivements
+
+
+

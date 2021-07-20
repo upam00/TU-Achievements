@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h6=title
+
+  form(method='POST' action='')
+    
+    div.form-group
+      label(for='student') Student:
+      select#student.form-control(type='select', placeholder='Select Student ID' name='student' required='true' )
+        - students.sort(function(a, b) {let textA = a.enrollment_no.toUpperCase(); let textB = b.enrollment_no.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+        for student in students
+          if result
+            option(value=student._id selected=(student._id.toString()===result.student._id.toString() ? 'selected' : false) ) #{student.enrollment_no}
+          else
+            option(value=student._id) #{student.enrollment_no}
+    div.form-group
+      label(for='exam') Exam:
+      select#student.form-control(type='select', placeholder='Select Exam' name='exam' required='true' )
+        - exams.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+        for exam in exams
+          if result
+            option(value=exam._id selected=(exam._id.toString()===result.exam._id.toString() ? 'selected' : false) ) #{exam.name}
+          else
+            option(value=exam._id) #{exam.name}
+    div.form-group
+      label(for='rank') Rank:
+      input#rank.form-control(type='textarea', placeholder='Rank' name='rank' value=(undefined===result ? '' : result.rank))
+    div.form-group
+      label(for='marks') Marks:
+      input#marks.form-control(type='text', placeholder='Marks' name='marks' value=(undefined===result ? '' : result.marks)) 
+    div.form-group
+      label(for='percentile') Percentile:
+      input#percentile.form-control(type='text', placeholder='Percentile' name='percentile' value=(undefined===result ? '' : result.percentile)) 
+      
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
+
+

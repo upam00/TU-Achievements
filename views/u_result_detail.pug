@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  
+  
+  p #[strong Student Name:] 
+    a(href='/catalog/student/'+result.student.url) #{result.student.name}
+  p #[strong Rank:] #{result.rank}
+  p #[strong Marks:] #{result.marks}
+  p #[strong Percentile:] #{result.percentile}
+  p #[strong Exam:] 
+    a(href= result.exam.url) #{result.exam.name}
+ 
+     
+  
+      
+  hr
+  p
+    a(href=result.url+'/delete') Delete Achivements
+  p
+    a(href=result.url+'/update') Update Achivements
+  p 
+    a(href='/catalog/results') All Achivements

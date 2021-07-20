@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  p #[strong Exam Name:] #{exam.name}
+  p #[strong About:] #{exam.about}
+
+  p
+    a(href=exam.url+'/update') Update Exam
+
+  hr  
+  p  
+    a(href="/catalog/exams") All exams
+  
+  
+    
